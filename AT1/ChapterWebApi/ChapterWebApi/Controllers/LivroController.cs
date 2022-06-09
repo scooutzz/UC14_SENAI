@@ -1,4 +1,5 @@
-﻿using ChapterWebApi.Repositories;
+﻿using ChapterWebApi.Models;
+using ChapterWebApi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,5 +31,79 @@ namespace ChapterWebApi.Controllers
                 throw new Exception(e.Message);
             }
         }
+
+        // n pode ter 2 métodos GET igual no controller, diferenciar as rotas
+        // api/livros/get (exemplo) [Route("get")] [HttpGet]
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            try
+            {
+
+                Livro livro = _livroRepository.BuscarPorId(id);
+
+                if (livro == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(livro);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Livro livro)
+        {
+            try
+            {
+                _livroRepository.Cadastrar(livro);
+
+                return StatusCode(201);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Livro livro)
+        {
+            try
+            {
+                _livroRepository.Atualizar(id, livro);
+
+                return StatusCode(204);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                _livroRepository.Deletar(id);
+
+                return StatusCode(204);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }
