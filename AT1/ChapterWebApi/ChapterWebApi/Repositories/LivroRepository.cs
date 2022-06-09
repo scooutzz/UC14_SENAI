@@ -15,19 +15,19 @@ namespace ChapterWebApi.Repositories
         public List<Livro> Listar()
         {
             // conexão com o banco
-            return _context.livros.ToList();
+            return _context.Livros.ToList();
         }
 
         // metodo retornar um livro específico
         public Livro BuscarPorId(int id)
         {
-            return _context.livros.Find(id);
+            return _context.Livros.Find(id);
         }
 
         // metodo de cadastro
         public void Cadastrar(Livro livro)
         {
-            _context.livros.Add(livro);
+            _context.Livros.Add(livro);
 
             _context.SaveChanges();
         }
@@ -35,7 +35,7 @@ namespace ChapterWebApi.Repositories
         // metodo atualizar
         public void Atualizar(int id, Livro livro)
         {
-            Livro livroBuscado = _context.livros.Find(id);
+            Livro livroBuscado = _context.Livros.Find(id);
 
             if (livroBuscado != null)
             {
@@ -44,7 +44,7 @@ namespace ChapterWebApi.Repositories
                 livroBuscado.Disponivel = livro.Disponivel;
             }
 
-            _context.livros.Update(livroBuscado);
+            _context.Livros.Update(livroBuscado);
 
             _context.SaveChanges();
         }
@@ -52,9 +52,9 @@ namespace ChapterWebApi.Repositories
         // metodo deletar
         public void Deletar(int id)
         {
-            Livro livro = _context.livros.Find(id);
+            Livro livro = _context.Livros.Find(id);
 
-            _context.livros.Remove(livro);
+            _context.Livros.Remove(livro);
 
             _context.SaveChanges();
         }
