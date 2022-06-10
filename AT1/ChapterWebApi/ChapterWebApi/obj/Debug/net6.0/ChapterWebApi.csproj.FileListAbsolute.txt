@@ -116,3 +116,4 @@ C:\Users\fabio\OneDrive\Área de Trabalho\ATIVIDADES SENAI\Back-End\UC14 - API\A
 C:\Users\fabio\OneDrive\Área de Trabalho\ATIVIDADES SENAI\Back-End\UC14 - API\AT2\ChapterWebApi\ChapterWebApi\obj\Debug\net6.0\ChapterWebApi.pdb
 C:\Users\fabio\OneDrive\Área de Trabalho\ATIVIDADES SENAI\Back-End\UC14 - API\AT2\ChapterWebApi\ChapterWebApi\obj\Debug\net6.0\ChapterWebApi.genruntimeconfig.cache
 C:\Users\fabio\OneDrive\Área de Trabalho\ATIVIDADES SENAI\Back-End\UC14 - API\AT2\ChapterWebApi\ChapterWebApi\obj\Debug\net6.0\ref\ChapterWebApi.dll
+C:\Users\fabio\OneDrive\Área de Trabalho\ATIVIDADES SENAI\Back-End\UC14 - API\AT1\ChapterWebApi\ChapterWebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

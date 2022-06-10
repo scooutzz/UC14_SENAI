@@ -66,7 +66,7 @@ namespace ChapterWebApi.Controllers
             }
         }
 
-        [HttpPut("{id})")]
+        [HttpPut("{id}")]
         public IActionResult Alterar(int id, Usuario usuario)
         {
             try
